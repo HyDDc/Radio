@@ -1,0 +1,135 @@
+$imageWidth: 100px;
+$height: 300px;
+$width: 500px;
+$highlightColor: indianred;
+$frameColor: rgb(56, 46, 105);
+$fontColor: rgb(161, 73, 73);
+$padding: 10px;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  margin-top:100px;
+  background: rgb(168, 167, 167); 
+}
+
+div {
+  color: $fontColor;
+}
+
+img {
+  width: $imageWidth;
+  clip-path: circle(50px at center);
+}
+
+.Stations::-webkit-scrollbar {
+  width: 0.1rem;
+}
+.Stations::-webkit-scrollbar-track {
+  background: black;
+}
+
+.Stations::-webkit-scrollbar-thumb {
+  background: $highlightColor;
+}
+
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  width: $width;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px  rgb(75, 73, 73);
+  max-height: 1000px
+}
+
+
+
+.Header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  margin: auto;
+  height: 50px;
+  background: $frameColor;
+  padding: $padding;
+  padding-left: 25px;
+  padding-right: 40px;
+  border: 1px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.Footer{
+  margin: auto;
+  width: width;
+  background: $frameColor;
+  padding: $padding;
+  border-radius: 0px 0px 15px 15px;
+  height: 50px;
+  max-height: 75px;
+  font-size: small;
+}
+
+
+.Info {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: $padding/2;
+}
+
+.player {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  padding: $padding;
+}
+
+
+.Stations{
+  margin: auto;
+  width: width;
+  background: rgb(27, 75, 97);
+  height: 400px;
+  max-height: 400px;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  overflow-x: hidden;
+  padding: $padding;
+}
+
+
+.Radio{
+  border-width: 0rem;
+  border-bottom: 1px solid rgb(131, 131, 133);
+  padding-left: 15px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: -5px;
+  scroll-snap-align: start;
+}
+
+.Radio:last-child{
+  border-bottom: 0px solid rgb(131, 131, 133);
+}
+
+p:hover {
+  color: $highlightColor;
+}
+
+.Icon:hover{
+  color: $highlightColor;;
+}
+
+
+@media only screen and (min-device-width: 480px){}
+@media only screen and (min-device-width: 768px){}
